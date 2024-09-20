@@ -40,6 +40,7 @@ public class Departamento {
         this.nombreDepartamento = nombreDepartamento;
         this.areaDepartamento = areaDepartamento;
         this.climaDepartamento = climaDepartamento;
+        System.out.println("hoa");
     }
 
     public Integer getCodDepartamento() {
