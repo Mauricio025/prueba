@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head th:replace="contenedor/tablero ::head"></head>
+    <body>
+        <main>
+            <nav th:replace="contenedor/tablero ::barraNavegacion"></nav>
+            <section>
+                <div class="container-fluid mt-4">
+                    <div class="d-flex justify-content-center">
+                        <div class="col-8"> <!-- Ajustado a col-8 para un mejor diseño -->
+                            <div class="card">
+                                <div class="card-header bg-primary text-white">
+                                    <h4 class="fst-italic fw-bold">Formulario Registrar Departamento</h4>
+                                </div>
+                                <div class="card-body">
+                                    <!-- El formulario ahora es para Departamento -->
+                                    <form th:object="${objDepartamento}" th:action="@{/addBrand}" method="post" class="m-3">
+
+                                        <!-- Nombre del Departamento -->
+                                        <div class="mb-3">
+                                            <label class="form-label">
+                                                <span class="rojito">*</span>Nombre del Departamento
+                                            </label>
+                                            <input type="text" name="nombreDepartamento" class="form-control" th:field="*{nombreDepartamento}" required>
+                                        </div>
+
+                                        <!-- Área del Departamento -->
+                                        <div class="mb-3">
+                                            <label class="form-label">
+                                                <span class="rojito">*</span>Área del Departamento
+                                            </label>
+                                            <input type="number" step="0.01" name="areaDepartamento" class="form-control" th:field="*{areaDepartamento}" required>
+                                        </div>
+
+                                        <!-- Clima del Departamento -->
+                                        <div class="mb-3">
+                                            <label class="form-label">
+                                                <span class="rojito">*</span>Clima del Departamento
+                                            </label>
+                                            <input type="text" name="climaDepartamento" class="form-control" th:field="*{climaDepartamento}" required>
+                                        </div>
+
+                                        <span class="mb-3 d-flex justify-content-center">
+                                            <button type="submit" class="btn btn-primary">
+                                                Registrar Departamento
+                                            </button>
+                                        </span>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer th:replace="contenedor/tablero ::footer"></footer>
+    </body>
+</html>

@@ -1,0 +1,69 @@
+<head th:fragment="head">
+    <title>Colombia</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" th:href="@{/img/favicon.ico}" type="image/png"/>
+    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}"/>
+    <link rel="stylesheet" th:href="@{/css/estilos.css}"/>    
+</head>
+
+<nav class="navbar navbar-expand-lg bg-dark navbar-dark" th:fragment="barraNavegacion">
+    <div class="container-fluid">
+
+        <a class="navbar-brand" th:href="@{/}">
+            <div>
+                <img th:src="@{/img/logo1.png}" alt="logo.jpg" style="height: 50px">
+                <span class="fst-italic fw-bold fs-4">Colombia</span>
+            </div>
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" th:href="@{/}">Inicio</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" th:href="@{/contact}">Contacto</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" th:href="@{/aboutMe}">Acerca de</a>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Productos
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" th:href="@{/listBrand}">Listar</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" th:href="@{/addDep}">Registrar</a></li>
+                    </ul>
+                </li>
+
+            </ul>
+            <div class="navbar-nav">
+                <span class="d-flex justify-content-center">
+                    <a th:href="@{singnin}" class="nav-link">Inicio Sesión</a>
+                </span>
+
+            </div>
+        </div>
+    </div>
+</nav>
+
+
+<footer class="blog-footer bg-dark" th:fragment="footer">
+    <p class="fw-semibold fst-italic fs-4">Plataforma Tienda Productos - products store</p>
+    <p class="fw-semibold fst-italic fs-5">Tienda de venta de productos de todo tipo.</p>
+    <p class="fst-italic fs-6">
+        CopyRigth &COPY; Derechos recervados Equipo Desarrollo Ingenieria Software 1
+    </p>
+    <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.js"></script>
+    <script th:src="@{/js/bootstrap.min.js}"></script>
+</footer>

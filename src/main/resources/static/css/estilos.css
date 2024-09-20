@@ -1,0 +1,13 @@
+.blog-footer{
+    padding: 2.5rem;
+    color: lightgray;
+    text-align: center;
+    border-top: gray solid 4px;    
+}
+section{
+    height: 40rem;
+}
+.fondo-presentation{
+     background: rgb(2,0,36);
+background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(78,54,120,1) 29%, rgba(49,155,177,0.9819327389158788) 100%); 
+}
